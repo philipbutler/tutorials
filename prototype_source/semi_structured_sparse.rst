@@ -70,7 +70,7 @@ What problem does semi-structured sparsity solve?
 The general motivation behind sparsity is simple: if there are zeros in your network, you can avoid storing / doing compute with those parameters.
 However, the specifics of sparsity are tricky. Zeroing out parameters doesn't affect the latency / memory overhead of our model out of the box.
 
-This is because the dense tensor still contains the pruned (zero) elements, which the dense matrix multiplication kernel will still operate on this elements.
+This is because the dense tensor still contains the pruned (zero) elements, which the dense matrix multiplication kernel will still operate on.
 In order to realize performance gains, we need to swap out dense kernels for sparse kernels, which skip calculation involving pruned elements.
 
 To do this, these kernels work on sparse matrices, which do not store the pruned elements and store the specified elements in a compressed format.
