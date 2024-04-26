@@ -14,9 +14,9 @@ We will explain this process in this tutorial.
 .. image:: ../../_static/img/pruning_flow.jpg
 
 By the end of this tutorial, we will have 
-- sparsified a BERT question-answering model to be 2:4 sparse
-- fine-tuned it to recover nearly all F1 loss (86.92 dense vs 86.48 sparse)
-- accelerated this 2:4 sparse model for inference, yielding a 1.3x speedup
+* sparsified a BERT question-answering model to be 2:4 sparse,
+* fine-tuned it to recover nearly all F1 loss (86.92 dense vs 86.48 sparse),
+* accelerated this 2:4 sparse model for inference, yielding a 1.3x speedup
 
 Requirements
 --------------
